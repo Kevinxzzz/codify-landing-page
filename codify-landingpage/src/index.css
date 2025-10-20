@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 30 25% 98%;
+    --foreground: 25 20% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 20% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 20% 25%;
+
+    --primary: 340 65% 75%;
+    --primary-foreground: 340 50% 20%;
+
+    --secondary: 210 60% 80%;
+    --secondary-foreground: 210 50% 20%;
+
+    --muted: 270 35% 92%;
+    --muted-foreground: 270 15% 45%;
+
+    --accent: 150 45% 75%;
+    --accent-foreground: 150 40% 20%;
+
+    --destructive: 0 70% 70%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 25% 88%;
+    --input: 270 25% 88%;
+    --ring: 340 65% 75%;
+
+    --radius: 1rem;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(340 65% 75%),
+      hsl(210 60% 80%)
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(30 25% 98%),
+      hsl(270 35% 95%)
+    );
+
+    --shadow-soft: 0 4px 20px -4px hsl(340 40% 75% / 0.15);
+    --shadow-medium: 0 8px 30px -6px hsl(340 40% 75% / 0.2);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 30 20% 90%;
+
+    --card: 0 10% 10%;
+    --card-foreground: 30 20% 90%;
+
+    --popover: 25 20% 15%;
+    --popover-foreground: 30 20% 90%;
+
+    --primary: 300 40% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 50% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 270 20% 25%;
+    --muted-foreground: 270 15% 65%;
+
+    --accent: 300 25% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 20% 25%;
+    --input: 270 20% 25%;
+    --ring: 340 55% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
