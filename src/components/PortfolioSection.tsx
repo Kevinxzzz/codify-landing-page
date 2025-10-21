@@ -8,17 +8,19 @@ import projectLandingPage from "@/assets/project-landingPage.png";
 import projectApp from "@/assets/project-app.png";
 
 const projects = [
-    {
+  {
     image: projectLandingPage,
     title: "Landing Page",
-    description: "landing page institucional para apresentar a empresa e captar leads.",
+    description:
+      "landing page institucional para apresentar a empresa e captar leads.",
     category: "Empreendimento",
     result: "1x pedido",
   },
   {
     image: projectDashboard,
     title: "Dashboad gestão e performace",
-    description: "dashboard de gestão. Aumenta a produtividade e eficiência operacional.",
+    description:
+      "dashboard de gestão. Aumenta a produtividade e eficiência operacional.",
     category: "Empreendimento",
     result: "1x pedido",
   },
@@ -32,24 +34,27 @@ const projects = [
   {
     image: projectEcommerce,
     title: "Loja Virtual Fashion Store",
-    description: "E-commerce completo que aumentou as vendas em 85% nos primeiros 3 meses",
+    description:
+      "E-commerce completo que aumentou as vendas em 85% nos primeiros 3 meses",
     category: "Loja Online",
-    result: ""
+    result: "",
   },
   {
     image: projectRestaurant,
     title: "Site Restaurante Sabor & Arte",
-    description: "Site moderno com cardápio digital que triplicou os pedidos online",
+    description:
+      "Site moderno com cardápio digital que triplicou os pedidos online",
     category: "Site Profissional",
-    result: ""
+    result: "",
   },
   {
     image: projectSystem,
     title: "Sistema de Gestão Clínica Vida",
-    description: "Plataforma personalizada que reduziu 60% do tempo em tarefas administrativas",
+    description:
+      "Plataforma personalizada que reduziu 60% do tempo em tarefas administrativas",
     category: "Sistema Personalizado",
-    result: ""
-  }
+    result: "",
+  },
 ];
 
 const PortfolioSection = () => {
@@ -61,19 +66,20 @@ const PortfolioSection = () => {
             Projetos Que Transformaram Negócios
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Veja alguns exemplos de como ajudamos empresas a alcançar seus objetivos
+            Veja alguns exemplos de como ajudamos empresas a alcançar seus
+            objetivos
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
-            <Card 
+            <Card
               key={index}
               className="group overflow-hidden hover:shadow-elegant-xl transition-all duration-300 border-2 hover:border-primary/30"
             >
               <div className="relative aspect-square overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -91,7 +97,7 @@ const PortfolioSection = () => {
                   </span>
                 </div>
               </div>
-              
+
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2">
                   {project.title}

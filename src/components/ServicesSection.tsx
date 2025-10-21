@@ -30,7 +30,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 sm:py-1 mb-15 bg-background">
+    <section className="pt-20 pb-0 sm:py-30 mb-15 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">

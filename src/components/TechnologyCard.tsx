@@ -19,12 +19,18 @@ export const TechnologyCard = ({ technology }: TechnologyCardProps) => {
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
       <CardContent className="p-6 text-center space-y-3">
-        <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-2xl font-bold ${categoryColors[technology.category]}`}>
+        <div
+          className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-2xl font-bold ${
+            categoryColors[technology.category]
+          }`}
+        >
           {technology.name.charAt(0)}
         </div>
         <h3 className="font-semibold text-lg">{technology.name}</h3>
         {technology.experience && (
-          <p className="text-sm text-muted-foreground">{technology.experience}</p>
+          <p className="text-sm text-muted-foreground">
+            {technology.experience}
+          </p>
         )}
         <Badge variant="outline" className="text-xs capitalize">
           {technology.category}

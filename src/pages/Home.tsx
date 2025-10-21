@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Code2, Users, Rocket, Award, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Code2,
+  Users,
+  Rocket,
+  Award,
+  Sparkles,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -12,6 +19,7 @@ import { projects } from "@/data/mockData";
 import { ProjectCard } from "@/components/ProjectCard";
 import heroTeam from "@/assets/hero-team.jpg";
 import imageHome from "@/assets/imageHome.png";
+import PortfolioSection from "@/components/PortfolioSection";
 const Home = () => {
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 3);
 
@@ -33,7 +41,7 @@ const Home = () => {
             <h1 className="text-5xl md:text-4xl font-bold leading-tight">
               Transformamos
               <span className="text-primary"> ideias </span>
-              em Softwares e soluções 
+              em Softwares e soluções
             </h1>
             <p className="text-xl md:text-1xl text-muted-foreground max-w-2xl mx-auto">
               Somos uma equipe apaixonada por tecnologia, focada em criar
@@ -79,7 +87,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <PortfolioSection />
       {/* Featured Projects */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -101,52 +109,51 @@ const Home = () => {
           </div>
         </div>
       </section>
-              {/* Hero + CTA */}
-              <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  {/* Left Content */}
-                  <div className="space-y-8 animate-fade-in">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
-                      <Sparkles className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-medium text-primary">
-                        Transformando Ideias em Realidade
-                      </span>
-                    </div>
-        
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                      Soluções Digitais que Fazem Seu Negócio{" "}
-                      <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        Crescer
-                      </span>
-                    </h1>
-        
-                    <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                      Criamos sites, lojas virtuais e sistemas personalizados para
-                      empresas que querem resultados reais. Simples assim.
-                    </p>
-        
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button onClick={scrollToContact} className="cta group">
-                        <Link to="/solutions">Veja nossas soluções</Link> 
-                        <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                      <Button variant="outline" size="lg" className="border-2" asChild>
-                        <Link to="/contact">Entre em Contato</Link>
-                      </Button>
-                    </div>
-                    <div className="relative animate-slide-up">
+      {/* Hero + CTA */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">
+                Transformando Ideias em Realidade
+              </span>
             </div>
-                  </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-elegant-xl">
-              <img 
-                src={imageHome} 
-                alt="Equipe de negócios celebrando sucesso"
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-              </div>
-                </div>
-              </section>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              Soluções Digitais que Fazem Seu Negócio{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Crescer
+              </span>
+            </h1>
+
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Criamos sites, lojas virtuais e sistemas personalizados para
+              empresas que querem resultados reais. Simples assim.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button onClick={scrollToContact} className="cta group">
+                <Link to="/solutions">Veja nossas soluções</Link>
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-2" asChild>
+                <Link to="/contact">Entre em Contato</Link>
+              </Button>
+            </div>
+            <div className="relative animate-slide-up"></div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant-xl">
+            <img
+              src={imageHome}
+              alt="Equipe de negócios celebrando sucesso"
+              className="w-full h-auto"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+          </div>
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-20 px-4 bg-muted/30">
@@ -192,8 +199,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-
     </div>
   );
 };
