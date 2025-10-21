@@ -61,7 +61,7 @@ const Home = () => {
             {[
               { icon: Users, value: "4+", label: "Desenvolvedores" },
               { icon: Code2, value: "5+", label: "Tecnologias" },
-              { icon: Rocket, value: "1", label: "Projetos" },
+              { icon: Rocket, value: "3", label: "Projetos" },
               { icon: Award, value: "100%", label: "Dedicação" },
             ].map((stat, index) => (
               <div
