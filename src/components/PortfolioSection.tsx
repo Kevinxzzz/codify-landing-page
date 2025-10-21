@@ -4,7 +4,7 @@ import projectEcommerce from "@/assets/project-ecommerce.png";
 import projectRestaurant from "@/assets/project-restaurant.png";
 import projectSystem from "@/assets/project-system.png";
 import projectDashboard from "@/assets/project-dashboard.png";
-import projectLandingPage from "@/assets/project-landingpage.png";
+import projectLandingPage from "@/assets/project-landingPage.png";
 import projectApp from "@/assets/project-app.png";
 
 const projects = [
